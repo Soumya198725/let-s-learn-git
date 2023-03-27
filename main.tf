@@ -1,4 +1,14 @@
-ource "aws_s3_bucket" "b" {
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.60.0"
+    }
+  }
+}
+
+
+source "aws_s3_bucket" "b" {
   bucket = "my-tf-test-bucket"
   acl    = "private"
 
